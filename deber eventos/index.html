@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Eventos </title>
+
+<h1> <center>Aplicación de los eventos de JAVASCRIP </center></h1>
+
+<style>
+div {
+    width: 100px;
+    height: 100px;
+    border: 3px solid black;
+    margin: 10px;
+    float: left;
+    padding: 30px;
+    text-align: center;
+    background-color: #ABEBC6;
+}
+
+p {
+    background-color: white;
+}
+</style>
+</head>
+
+ <!--	El evento se produce cuando un objeto se ha cargado-->
+<body onload="loadpagina()" style="font-family: Bookman Old Style;">
+
+
+<p>Por tanto más que pretender conocer todos los eventos y en base a ello escribir nuestro código, más bien debemos preguntarnos qué es lo que queremos hacer y en base a ello buscar el evento que nos permite hacerlo. Una vez localizado el evento, deberemos documentarnos en internet para comprobar cuál es la compatibilidad con los distintos navegadores. Recomendamos usar sólo aquellos eventos que tengan compatibilidad contrastada en la mayoría de los navegadores.</p>
+
+
+
+<table style="border-spacing: 80px;" align="center"> 
+
+    <tr> 
+        <td align="center"> <b>Ejemplo N° 1</b> </td> 
+        <td align="center"><b>Ejemplo N° 2</b></td> 
+        <td align="center"><b>Ejemplo N° 3</b></td>  
+    </tr> 
+
+    <tr> 
+        <td >
+        <!-- El evento onmousemove se produce cuando el puntero se mueve mientras está sobre un elemento.-->
+			<div  onmousemove="myMoveFunction()">
+				<p>Evento onmousemove: <br> <span id="prueba2">Eventos Relacionados con el raton</span></p>
+			</div>
+			<!--El evento OnMouseLeave se produce cuando el puntero del ratón se mueve fuera de un elemento.-->
+			<div onmouseleave="myLeaveFunction()">
+				<p>  Evento onmouseleave: <br> <span id="prueba3">Relacionados con el teclado</span></p>
+			</div>
+		</td> 
+        <td>
+	
+			<img width= "220px" height="180px" src="https://c24e867c169a525707e0-bfbd62e61283d807ee2359a795242ecb.ssl.cf3.rackcdn.com/imagenes/gato/etapas-clave-de-su-vida/gatitos/nuevo-gatito-en-casa/gatito-tumbado-lamiendo-sus-patitas.jpg" onmouseover="this.src='http://issuespost.com/wp-content/uploads/2017/05/gatitos.jpg';"
+			onmouseout="this.src='https://c24e867c169a525707e0-bfbd62e61283d807ee2359a795242ecb.ssl.cf3.rackcdn.com/imagenes/gato/etapas-clave-de-su-vida/gatitos/nuevo-gatito-en-casa/gatito-tumbado-lamiendo-sus-patitas.jpg';"/>
+		
+		</td> 
+        <td>
+		
+			<table border="4" width="500" HEIGHT="400">
+
+  <tr>
+
+    <th >Contenido</th>
+
+    <th>Peces</th>
+
+    <th>Reptiles</th>
+
+  </tr>
+
+  <tr>
+
+    <th>Ejemplos de animales</th>
+
+    <!--El evento ondblclick se produce cuando el usuario hace doble clic sobre un elemento.-->
+
+    <td id="prueba1" ondblclick="dobleclic()" > <p id="texto">Salmón - Tiburón - Pez espada - Anguila - Atún (Presiona dos veces aquí)</p></td>
+
+    <td> Cocodrilo - Tortuga - Serpiente - Lagartija - Iguana</td>
+
+  </tr>
+
+</table>
+
+</body>
+<!--funciones para llamar a los eventos -->
+<script>
+
+function dobleclic() {
+    document.getElementById("prueba1").style.color = "red";
+}
+
+function loadpagina() {
+    alert("Bienvenido a mi pagina");
+}
+
+function myMoveFunction() {
+    document.getElementById("prueba2").style.color = "blue";
+}
+
+function myLeaveFunction() {
+    document.getElementById("prueba3").style.background = "green";
+}
+
+
+</script>
+</html>
